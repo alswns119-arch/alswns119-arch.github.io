@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>상품페이</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    function openChat(message) {
+      const url =
+        "https://open.kakao.com/o/s9FIptai?text=" +
+        encodeURIComponent(message);
+      window.open(url, "_blank");
+    }
+  </script>
 </head>
 
 <body class="bg-gray-100">
@@ -15,47 +24,102 @@
     <span class="bg-green-500 text-xs px-2 py-1 rounded">안전거래</span>
   </header>
 
-  <!-- 상단 여백 -->
   <div class="h-14"></div>
 
-  <!-- 상품 리스트 -->
-  <main class="p-4 space-y-4">
+  <!-- 메인 레이아웃 -->
+  <main class="p-4 flex flex-col md:flex-row gap-4">
 
-    <div class="bg-white rounded-lg shadow p-4 text-center">
-      <h2 class="font-bold text-lg">라이즈 콘서트 막콘</h2>
-      <p class="text-gray-700 mt-1">가격: 600,000원</p>
-    </div>
+    <!-- 매물 영역 -->
+    <section class="md:w-2/3 space-y-4">
 
-    <div class="bg-white rounded-lg shadow p-4 text-center">
-      <h2 class="font-bold text-lg">엔하이픈 쇼케이스 1차</h2>
-      <p class="text-gray-700 mt-1">가격: 300,000원</p>
-    </div>
+      <div onclick="openChat('라이즈 콘서트 중콘 / 스탠딩 A구역 / 400,000원 문의드립니다')"
+        class="bg-white rounded-lg shadow p-4 cursor-pointer hover:bg-gray-50">
+        <p class="font-bold">라이즈 콘서트 중콘</p>
+        <p class="text-sm text-gray-600">좌석: 스탠딩 A구역</p>
+        <p class="mt-1">가격: 400,000원</p>
+      </div>
 
-    <div class="bg-white rounded-lg shadow p-4 text-center">
-      <h2 class="font-bold text-lg">킥플립 서울</h2>
-      <p class="text-gray-700 mt-1">가격: 180,000원</p>
-    </div>
+      <div onclick="openChat('라이즈 콘서트 중콘 / 스탠딩 B구역 / 450,000원 문의드립니다')"
+        class="bg-white rounded-lg shadow p-4 cursor-pointer hover:bg-gray-50">
+        <p class="font-bold">라이즈 콘서트 중콘</p>
+        <p class="text-sm text-gray-600">좌석: 스탠딩 B구역</p>
+        <p class="mt-1">가격: 450,000원</p>
+      </div>
 
-    <!-- 카카오톡 버튼 -->
-    <div class="pt-4">
-      <a
-        href="https://open.kakao.com/o/s9FIptai"
-        target="_blank"
-        class="block w-full bg-yellow-400 text-black font-bold py-3 rounded text-center"
-      >
-        상품 안전거래 고객센터
-      </a>
-    </div>
+      <div onclick="openChat('라이즈 콘서트 막콘 / 스탠딩 A구역 / 500,000원 문의드립니다')"
+        class="bg-white rounded-lg shadow p-4 cursor-pointer hover:bg-gray-50">
+        <p class="font-bold">라이즈 콘서트 막콘</p>
+        <p class="text-sm text-gray-600">좌석: 스탠딩 A구역</p>
+        <p class="mt-1">가격: 500,000원</p>
+      </div>
 
-    <!-- 하단 정보 -->
-    <div class="text-xs text-gray-600 text-center pt-6 leading-5">
-      <p>대표자: 김민준</p>
-      <p>중개자: 변호사협회등록 개인변호사</p>
-      <p>상호명: 상품안전거래</p>
-      <p>사업자번호: 532 372912 211</p>
-    </div>
+      <div onclick="openChat('라이즈 콘서트 막콘 / 1층 R석 / 450,000원 문의드립니다')"
+        class="bg-white rounded-lg shadow p-4 cursor-pointer hover:bg-gray-50">
+        <p class="font-bold">라이즈 콘서트 막콘</p>
+        <p class="text-sm text-gray-600">좌석: 1층 R석</p>
+        <p class="mt-1">가격: 450,000원</p>
+      </div>
+
+    </section>
+
+    <!-- 리뷰 영역 -->
+    <aside class="md:w-1/3 bg-white rounded-lg shadow p-4 h-[600px] overflow-y-auto">
+      <p class="font-bold mb-3">실시간 이용 후기</p>
+
+      <ul class="space-y-2 text-sm text-gray-700">
+        <!-- 40개 리뷰 -->
+        <li>상품권 결제라서 처음엔 불안했는데 진행이 너무 깔끔했어요</li>
+        <li>처음 이용하는 안전거래 사이트였는데 생각보다 편했습니다</li>
+        <li>중개사님이 구매자 입장에서 설명 잘 해주셨어요</li>
+        <li>응답 속도가 빨라서 기다리는 스트레스가 없었어요</li>
+        <li>상품 확인 후 결제라서 안심하고 진행했습니다</li>
+        <li>처음이라 질문 많았는데 하나하나 친절히 답해주셨어요</li>
+        <li>입금 타이밍도 명확해서 헷갈리지 않았습니다</li>
+        <li>중개 과정이 투명해서 신뢰가 갔어요</li>
+        <li>다음에도 여기 이용할 생각 있습니다</li>
+        <li>후기 보고 반신반의했는데 실제로 괜찮네요</li>
+        <li>구매자 의견을 잘 반영해주는 느낌이었어요</li>
+        <li>거래 진행 상황을 계속 안내해줘서 좋았습니다</li>
+        <li>불안한 부분을 먼저 설명해줘서 신뢰감이 생겼어요</li>
+        <li>처음 거래인데 문제 없이 끝났습니다</li>
+        <li>중개사님 말투가 차분해서 좋았어요</li>
+        <li>응대가 빠르고 정확했습니다</li>
+        <li>상품 전달 확인 후 결제라 마음이 편했어요</li>
+        <li>복잡할 줄 알았는데 생각보다 간단했습니다</li>
+        <li>다른 곳보다 설명이 명확했어요</li>
+        <li>중간중간 진행상황 알려주는 게 좋았습니다</li>
+        <li>처음엔 반신반의했는데 결과적으로 만족</li>
+        <li>불안 요소를 숨기지 않고 설명해줘서 좋았어요</li>
+        <li>거래가 깔끔하게 마무리됐습니다</li>
+        <li>응대 태도가 신뢰를 줍니다</li>
+        <li>다음 거래도 여기서 할 것 같아요</li>
+        <li>처음 이용자에게 추천할 만해요</li>
+        <li>문의 답변이 빠른 게 제일 좋았어요</li>
+        <li>거래 중간에 불안할 틈이 없었어요</li>
+        <li>생각보다 체계적이어서 놀랐습니다</li>
+        <li>중개사님이 중립적으로 잘 진행해주셨어요</li>
+        <li>절차가 명확해서 좋았습니다</li>
+        <li>불필요한 말 없이 핵심만 알려줘요</li>
+        <li>신속한 진행이 인상적이었어요</li>
+        <li>거래 경험이 좋아서 후기 남깁니다</li>
+        <li>상담이 편해서 부담이 없었어요</li>
+        <li>처음인데도 어렵지 않았습니다</li>
+        <li>설명 듣고 나니 안심이 됐어요</li>
+        <li>응대가 친절해서 기분 좋게 거래했습니다</li>
+        <li>다른 분들 후기처럼 괜찮았습니다</li>
+        <li>전반적으로 만족스러운 거래였어요</li>
+      </ul>
+    </aside>
 
   </main>
+
+  <!-- 하단 정보 -->
+  <footer class="text-xs text-gray-600 text-center py-6">
+    <p>대표자: 김민준</p>
+    <p>중개자: 변호사협회등록 개인변호사</p>
+    <p>상호명: 상품안전거래</p>
+    <p>사업자번호: 532 372912 211</p>
+  </footer>
 
 </body>
 </html>
