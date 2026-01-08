@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>상품페이</title>
+  <title>상품안전거래</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
@@ -25,95 +25,108 @@
     }
     window.onload = () => {
       slideReviews();
-      setInterval(slideReviews, 2500);
+      setInterval(slideReviews, 2800);
     };
   </script>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gradient-to-b from-gray-50 to-gray-200">
 
   <!-- 헤더 -->
-  <header class="fixed top-0 left-0 w-full bg-black text-white px-4 py-3 flex justify-between items-center z-50">
-    <span class="font-bold text-lg">상품페이</span>
-    <span class="bg-green-500 text-xs px-2 py-1 rounded">안전거래</span>
+  <header class="fixed top-0 left-0 w-full bg-black text-white px-5 py-3 flex justify-between items-center z-50 shadow">
+    <span class="font-semibold text-lg tracking-wide">상품안전거래</span>
+    <span class="bg-emerald-500 text-xs px-3 py-1 rounded-full">안전거래</span>
   </header>
 
-  <div class="h-14"></div>
+  <div class="h-16"></div>
 
   <!-- 후기 슬라이더 -->
-  <section class="bg-white mx-4 mt-3 p-3 rounded-lg shadow">
-    <p class="font-bold text-sm mb-2">실시간 이용 후기</p>
-    <div class="space-y-1 text-sm text-gray-700 h-12 overflow-hidden">
-      <p class="review">상품권 결제라 불안했지만 진행이 깔끔했어요</p>
-      <p class="review">처음 이용했는데 생각보다 안전했습니다</p>
-      <p class="review">중개사님이 구매자 입장에서 잘 설명해줘요</p>
-      <p class="review">응대가 빠르고 친절했습니다</p>
-      <p class="review">상품 확인 후 결제라 안심됐어요</p>
-      <p class="review">처음인데도 어렵지 않았습니다</p>
-      <p class="review">진행 상황을 계속 안내해줘서 좋았어요</p>
-      <p class="review">다음 거래도 여기서 할 것 같아요</p>
+  <section class="bg-white mx-4 mt-4 p-4 rounded-xl shadow-sm border">
+    <p class="font-semibold text-sm mb-2 text-gray-800">실시간 이용 후기</p>
+    <div class="space-y-1 text-sm text-gray-600 h-12 overflow-hidden">
+      <p class="review">상품권 결제라 불안했지만 진행이 매우 깔끔했어요</p>
+      <p class="review">처음 이용한 안전거래 사이트인데 신뢰가 갔습니다</p>
+      <p class="review">중개사님이 구매자 의견을 잘 들어주셨어요</p>
+      <p class="review">응대가 빠르고 차분해서 안심됐습니다</p>
+      <p class="review">상품 확인 후 결제라서 걱정 없었어요</p>
+      <p class="review">처음인데도 절차가 명확해서 좋았습니다</p>
     </div>
   </section>
 
   <!-- 매물 리스트 -->
-  <main class="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+  <main class="p-4 grid grid-cols-1 md:grid-cols-2 gap-5">
 
+    <!-- 공통 카드 스타일 -->
     <!-- 라이즈 막콘 -->
     <div onclick="openChat('라이즈 막콘 / 1층 8구역 2열 / 400,000원 문의드립니다')"
-      class="bg-white p-4 rounded-lg shadow cursor-pointer hover:bg-gray-50">
-      <p class="font-bold">라이즈 막콘</p>
-      <p class="text-sm text-gray-600">1층 8구역 2열</p>
-      <p>400,000원</p>
+      class="bg-white rounded-xl border shadow-sm p-5 cursor-pointer hover:shadow-md transition">
+      <span class="inline-block text-xs bg-gray-100 px-2 py-1 rounded mb-2">라이즈 콘서트</span>
+      <p class="font-semibold text-lg">라이즈 막콘</p>
+      <p class="text-sm text-gray-500">1층 8구역 2열</p>
+      <p class="text-xl font-bold text-emerald-600 mt-2">400,000원</p>
+      <p class="text-xs text-gray-400 mt-3">클릭 시 상담사 자동 연결</p>
     </div>
 
     <div onclick="openChat('라이즈 막콘 / 1층 8구역 2열 / 450,000원 문의드립니다')"
-      class="bg-white p-4 rounded-lg shadow cursor-pointer hover:bg-gray-50">
-      <p class="font-bold">라이즈 막콘</p>
-      <p class="text-sm text-gray-600">1층 8구역 2열</p>
-      <p>450,000원</p>
+      class="bg-white rounded-xl border shadow-sm p-5 cursor-pointer hover:shadow-md transition">
+      <span class="inline-block text-xs bg-gray-100 px-2 py-1 rounded mb-2">라이즈 콘서트</span>
+      <p class="font-semibold text-lg">라이즈 막콘</p>
+      <p class="text-sm text-gray-500">1층 8구역 2열</p>
+      <p class="text-xl font-bold text-emerald-600 mt-2">450,000원</p>
+      <p class="text-xs text-gray-400 mt-3">클릭 시 상담사 자동 연결</p>
     </div>
 
     <!-- 라이즈 첫콘 -->
     <div onclick="openChat('라이즈 첫콘 / 1층 6구역 5열 / 400,000원 문의드립니다')"
-      class="bg-white p-4 rounded-lg shadow cursor-pointer hover:bg-gray-50">
-      <p class="font-bold">라이즈 첫콘</p>
-      <p class="text-sm text-gray-600">1층 6구역 5열</p>
-      <p>400,000원</p>
+      class="bg-white rounded-xl border shadow-sm p-5 cursor-pointer hover:shadow-md transition">
+      <span class="inline-block text-xs bg-gray-100 px-2 py-1 rounded mb-2">라이즈 콘서트</span>
+      <p class="font-semibold text-lg">라이즈 첫콘</p>
+      <p class="text-sm text-gray-500">1층 6구역 5열</p>
+      <p class="text-xl font-bold text-emerald-600 mt-2">400,000원</p>
+      <p class="text-xs text-gray-400 mt-3">클릭 시 상담사 자동 연결</p>
     </div>
 
     <div onclick="openChat('라이즈 첫콘 / 1층 6구역 5열 / 500,000원 문의드립니다')"
-      class="bg-white p-4 rounded-lg shadow cursor-pointer hover:bg-gray-50">
-      <p class="font-bold">라이즈 첫콘</p>
-      <p class="text-sm text-gray-600">1층 6구역 5열</p>
-      <p>500,000원</p>
+      class="bg-white rounded-xl border shadow-sm p-5 cursor-pointer hover:shadow-md transition">
+      <span class="inline-block text-xs bg-gray-100 px-2 py-1 rounded mb-2">라이즈 콘서트</span>
+      <p class="font-semibold text-lg">라이즈 첫콘</p>
+      <p class="text-sm text-gray-500">1층 6구역 5열</p>
+      <p class="text-xl font-bold text-emerald-600 mt-2">500,000원</p>
+      <p class="text-xs text-gray-400 mt-3">클릭 시 상담사 자동 연결</p>
     </div>
 
     <div onclick="openChat('라이즈 첫콘 / 1층 6구역 5열 / 550,000원 문의드립니다')"
-      class="bg-white p-4 rounded-lg shadow cursor-pointer hover:bg-gray-50">
-      <p class="font-bold">라이즈 첫콘</p>
-      <p class="text-sm text-gray-600">1층 6구역 5열</p>
-      <p>550,000원</p>
+      class="bg-white rounded-xl border shadow-sm p-5 cursor-pointer hover:shadow-md transition">
+      <span class="inline-block text-xs bg-gray-100 px-2 py-1 rounded mb-2">라이즈 콘서트</span>
+      <p class="font-semibold text-lg">라이즈 첫콘</p>
+      <p class="text-sm text-gray-500">1층 6구역 5열</p>
+      <p class="text-xl font-bold text-emerald-600 mt-2">550,000원</p>
+      <p class="text-xs text-gray-400 mt-3">클릭 시 상담사 자동 연결</p>
     </div>
 
     <!-- 라이즈 중콘 -->
     <div onclick="openChat('라이즈 중콘 / 1층 8구역 1열 / 500,000원 문의드립니다')"
-      class="bg-white p-4 rounded-lg shadow cursor-pointer hover:bg-gray-50">
-      <p class="font-bold">라이즈 중콘</p>
-      <p class="text-sm text-gray-600">1층 8구역 1열</p>
-      <p>500,000원</p>
+      class="bg-white rounded-xl border shadow-sm p-5 cursor-pointer hover:shadow-md transition">
+      <span class="inline-block text-xs bg-gray-100 px-2 py-1 rounded mb-2">라이즈 콘서트</span>
+      <p class="font-semibold text-lg">라이즈 중콘</p>
+      <p class="text-sm text-gray-500">1층 8구역 1열</p>
+      <p class="text-xl font-bold text-emerald-600 mt-2">500,000원</p>
+      <p class="text-xs text-gray-400 mt-3">클릭 시 상담사 자동 연결</p>
     </div>
 
     <div onclick="openChat('라이즈 중콘 / 1층 8구역 1열 / 450,000원 문의드립니다')"
-      class="bg-white p-4 rounded-lg shadow cursor-pointer hover:bg-gray-50">
-      <p class="font-bold">라이즈 중콘</p>
-      <p class="text-sm text-gray-600">1층 8구역 1열</p>
-      <p>450,000원</p>
+      class="bg-white rounded-xl border shadow-sm p-5 cursor-pointer hover:shadow-md transition">
+      <span class="inline-block text-xs bg-gray-100 px-2 py-1 rounded mb-2">라이즈 콘서트</span>
+      <p class="font-semibold text-lg">라이즈 중콘</p>
+      <p class="text-sm text-gray-500">1층 8구역 1열</p>
+      <p class="text-xl font-bold text-emerald-600 mt-2">450,000원</p>
+      <p class="text-xs text-gray-400 mt-3">클릭 시 상담사 자동 연결</p>
     </div>
 
   </main>
 
   <!-- 하단 정보 -->
-  <footer class="text-xs text-gray-600 text-center py-6">
+  <footer class="text-xs text-gray-500 text-center py-8">
     <p>대표자: 김민준</p>
     <p>중개자: 변호사협회등록 개인변호사</p>
     <p>상호명: 상품안전거래</p>
